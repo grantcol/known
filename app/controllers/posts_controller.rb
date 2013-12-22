@@ -31,6 +31,10 @@ class PostsController < ApplicationController
 		@post.save
 	end
 
+	def updateExtension
+		#placeholder
+	end
+
 	def edit
 		@post = Post.find(params[:id])
 	end
