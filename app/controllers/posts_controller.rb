@@ -23,15 +23,12 @@ class PostsController < ApplicationController
 		redirect_to posts_path(@post)
 	end
 
+	# Reciever for links from extension land
 	def recieve
 		@post = Post.new(:title    => params[:title], 
 						 :subtitle => params[:url], 
 						 :body     => params[:subtitle])
 		@post.save
-	end
-
-	def updateExtension 
-		#something here
 	end
 
 	def edit

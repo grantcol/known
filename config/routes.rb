@@ -4,4 +4,5 @@ Known::Application.routes.draw do
   resources :links
   post 'posts/recieve'
   post 'links/recieve'
+  post 'links/updateExtension'
 end
