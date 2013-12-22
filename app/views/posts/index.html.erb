@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div class="meta_bar">
+			<div class="meta_bar_actionbox">
+			  <%= link_to "Create", post_path("/new"), class: 'visited'%>
+			  <%= link_to "Links", links_path, class: 'visited'%>
+		  	</div>
+		</div>
+		<div class="feed_container">
+			<div class="post_list">
+		  		<% @posts.reverse_each do |post| %>
+			  		<div class="preview_container">
+			      		<div class="post_header">
+			      			<%= link_to post.title, post_path(post), class: 'bold_title_tag visited' %>
+			      		</div>
+		      			<div class="post_subheader">
+		      				<%= post.subtitle %>
+		      			</div>
+			      	</div>
+		  		<% end %>
+		  	</div>
+	  	</div>
+	 </body>
+</html>
