@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
 
 	protect_from_forgery :secret => 'biscuits',  
-	                     :except => :recieve, :updateExtension
+	                     :except => [ :recieve, :updateExtension ]
 
 	def new 
 		@link = Link.new
@@ -25,9 +25,9 @@ class LinksController < ApplicationController
 	end
 
 	def updateExtension 
-		#@links = Link.all
-		#respond_to do |format|
-			#format.json { render :json =>  @links }
-		#end
+		@links = Link.all
+		respond_to do |format|
+			format.json { render :json =>  @links }
+		end
 	end
 end
