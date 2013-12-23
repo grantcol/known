@@ -3,6 +3,7 @@ Known::Application.routes.draw do
   resources :posts
   resources :links
   resources :users
+  resources :tags
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'
