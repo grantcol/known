@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<%= form_for(@user) do |f| %>
+		  
+		  	<% @user.errors.full_messages.each do |error| %>
+		    
+			<%= error %>
+
+			<% end %>
+		  
+		<article>
+			<div class="editor_body">
+			    <div>
+			    	<%= f.text_field :first , class: 'subtitle_box' , placeholder: 'First name' %>
+			    </div>
+			    <div>
+			    	<%= f.text_field :last , class: 'subtitle_box' , placeholder: 'Last name' %>
+			    </div>
+			    <div>
+			    	<%= f.text_field :email, class: 'subtitle_box', placeholder: 'Email' %>
+			    </div>
+			    <div>
+			    	<%= f.text_field :handle, class: 'subtitle_box', placeholder: '@your-cool-handle' %>
+			    </div>
+			    <div>
+			    	<%= f.text_field :password, class: 'subtitle_box', placeholder: 'password' %>
+			    </div>
+			    <%= f.submit %>
+			</div>
+		</article>  
+		<% end %>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div class="meta_bar">
+			<div class="meta_bar_actionbox">
+			  <%= link_to "Posts", post_path, class: 'visited'%>
+			  <%= link_to "Links", links_path, class: 'visited'%>
+		  	</div>
+		</div>
+		<div class="feed_container">
+			<div class="post_list">
+		  		<% @users do |user| %>
+			  		<div class="preview_container">
+			      		<div class="post_header">
+			      			<%= user.first %> <%= user.last %>
+			      		</div>
+		      			<div class="post_subheader">
+		      				<%= user.handle %>
+		      			</div>
+			      	</div>
+		  		<% end %>
+		  	</div>
+	  	</div>
+	 </body>
+</html>
