@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 		#				 :handle   => params[:handle],
 		#				 :password => params[:password]);
 		#@user.save
-		redirect_to user_path
+		redirect_to users_path(@user)
 	end
 
 	def auth
