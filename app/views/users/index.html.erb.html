@@ -9,7 +9,7 @@
 		</div>
 		<div class="feed_container">
 			<div class="post_list">
-		  		<% @users do |user| %>
+		  		<% @users.each do |user| %>
 			  		<div class="preview_container">
 			      		<div class="post_header">
 			      			<%= user.first %> <%= user.last %>
