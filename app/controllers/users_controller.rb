@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	include UsersHelper
-	
+
 	def index 
 		@users = User.all
 	end
@@ -13,12 +13,6 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		@user.save
 		flash.notice = "#{@user.handle} created"
-		#@user = User.new(:first    => params[:first],
-		#				 :last     => params[:last],
-		#				 :email    => params[:email],
-		#				 :handle   => params[:handle],
-		#				 :password => params[:password]);
-		#@user.save
 		redirect_to users_path(@user)
 	end
 

@@ -13,7 +13,7 @@
 		  		<% @users.each do |user| %>
 			  		<div class="preview_container">
 			      		<div class="post_header">
-			      			<%= user.first %>
+			      			<%= user.first user.last, class: 'bold_title_tag'%>
 			      		</div>
 		      			<div class="post_subheader">
 		      				<%= user.handle %>
