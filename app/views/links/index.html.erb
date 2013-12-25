@@ -24,11 +24,11 @@
 				      		</div>
 			      			<div class="link_subtitle_tag">
 			      				<% 
-			      					stripped = link.url.split!("https//:")
+			      					stripped = link.url.slice!("https//:")
 			      					if stripped != "https//:"
-			      						stripped = link.url.split!("http//:")
+			      						stripped = link.url.slice!("http//:")
 			      					end
-			      					temp = stripped.split("/");
+			      					temp = link.url.split("/");
 			      					stripped = temp[0];
 			      				%>
 			      				( <%= stripped %> ) <%= link.tags.first %>
