@@ -28,7 +28,7 @@
 			      					if stripped != "https//:"
 			      						stripped = link.url.split!("http//:")
 			      					end
-			      					temp = stripped.split!("/");
+			      					temp = stripped.split("/");
 			      					stripped = temp[0];
 			      				%>
 			      				( <%= stripped %> ) <%= link.tags.first %>
