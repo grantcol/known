@@ -18,8 +18,9 @@
 			  			<div>
 			      			<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 			      		</div>
-		      			<div class="link_subtitle_tag">
-		      				( <%= link.url %> ) <%= link.tags.first, class: "tag_label"%>
+		      			<div class="link_subtitle_tag" style="display: block;">
+		      				<p>( <%= link.url %> )</p> 
+		      				<p><%= link.tags.first%></p>
 		      			</div>
 			      	</div>
 		  		<% end %>
