@@ -29,10 +29,10 @@
 			      					if stripped != "https//:"
 			      						stripped = url.slice!("http//:")
 			      					end
-			      					temp = url.split("/");
-			      					stripped = temp[0];
+			      					#temp = url.split("/");
+			      					#stripped = temp[0];
 			      				%>
-			      				( <%= stripped %> ) <%= link.tags.first %>
+			      				( <%= url %> ) <%= link.tags.first %>
 			      			</div>
 		      			</div>
 			      	</div>
