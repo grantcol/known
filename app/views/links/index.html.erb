@@ -15,11 +15,14 @@
 				</div>
 		  		<% @link.reverse_each do |link| %>
 			  		<div class="preview_container">
+			  			<div class="img_container">
+			  				<img src="http://www.gravatar.com/avatar/e63d5e616a577605783b755cb6217434.png">
+			  			</div>
 			  			<div>
 			      			<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 			      		</div>
 		      			<div class="link_subtitle_tag">
-		      				( <%= link.url %> ) <%= link.tags.first%>
+		      				( <%= link.url %> ) <%= link.tags.first %>
 		      			</div>
 			      	</div>
 		  		<% end %>
