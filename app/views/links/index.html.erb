@@ -23,7 +23,15 @@
 				      			<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 				      		</div>
 			      			<div class="link_subtitle_tag">
-			      				( <%= link.url %> ) <%= link.tags.first %>
+			      				<% 
+			      					stripped = link.url.split!("https//:")
+			      					if stripped != "https//:"
+			      						stripped = link.url.split!("http//:")
+			      					end
+			      					temp = stripped.split!("/");
+			      					stripped = temp[0];
+			      				%>
+			      				( <%= stripped %> ) <%= link.tags.first %>
 			      			</div>
 		      			</div>
 			      	</div>
