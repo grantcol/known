@@ -25,14 +25,14 @@
 			      			<div class="link_subtitle_tag">
 			      				<% 
 			      					url = link.url
-			      					stripped = url.slice!("https//:")
-			      					if stripped != "https//:"
-			      						stripped = url.slice!("http//:")
+			      					stripped = url.slice!("https://")
+			      					if stripped != "https://"
+			      						stripped = url.slice!("http://")
 			      					end
-			      					#temp = url.split("/");
-			      					#stripped = temp[0];
+			      					temp = url.split("/");
+			      					stripped = temp[0];
 			      				%>
-			      				( <%= url %> ) <%= link.tags.first %>
+			      				( <%= stripped %> ) <%= link.tags.first %>
 			      			</div>
 		      			</div>
 			      	</div>
