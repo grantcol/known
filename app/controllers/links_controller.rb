@@ -19,8 +19,8 @@ class LinksController < ApplicationController
 	end
 
 	def recieve
-		@link = Link.new(:title => params[:title], 
-						 :url   => params[:url], 
+		@link = Link.new(:title    => params[:title], 
+						 :url      => params[:url], 
 						 :tag_list => params[:tag_list])
 		@link.save
 	end
