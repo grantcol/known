@@ -32,11 +32,11 @@
 			      					temp = url.split("/");
 			      					stripped = temp[0];
 			      				%>
-			      				( <%= stripped %> ) 
+			      				( <%= stripped %> ) <a class="tag_label" href="#"><%= link.tags.first %></a>
 			      			</div>
-			      			<div style="display: block;">
+			      			<!--<div style="display: block;">
 			      				<a class="tag_label" href="#"><%= link.tags.first %></a>
-			      			</div>
+			      			</div>-->
 		      			</div>
 			      	</div>
 		  		<% end %>
