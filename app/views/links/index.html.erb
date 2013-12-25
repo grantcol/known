@@ -21,6 +21,12 @@
 		      			<div class="link_subtitle_tag">
 		      				( <%= link.url %> )
 		      			</div>
+						<p>
+						  Tags:
+						  <% @link.tags.each do |tag| %>
+						    <%= link_to tag.name, tag_path(tag) %>
+						  <% end %>
+						</p>
 			      	</div>
 		  		<% end %>
 		  	</div>
