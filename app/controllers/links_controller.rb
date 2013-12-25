@@ -31,4 +31,18 @@ class LinksController < ApplicationController
 			format.json { render :json =>  @links }
 		end
 	end
+
+	def update 
+		@link = Link.find(params[:id])
+		@link.update(link_params)
+		flash.notice = "#{@link.title} updated"
+		redirect_to posts_path(@link)
+	end
+
+	def destroy
+		@link = Link.find(params[:id])
+		@link.destroy
+		flash.notice = "#{@link.title} trashed"
+		redirect_to links_path
+	end
 end
