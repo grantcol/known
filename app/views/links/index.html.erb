@@ -33,9 +33,7 @@
 			      					stripped = temp[0];
 			      				%>
 			      				( <%= stripped %> ) Tags: 
-			      				  <% link.tags.each do |tag| %>
-								    <%= link_to tag class: "tag_label" %>
-								  <% end %>
+			      				<a class="tag_label" href="#"><%= link.tags.first %></a>
 			      			</div>
 		      			</div>
 			      	</div>
