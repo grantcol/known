@@ -32,7 +32,10 @@
 			      					temp = url.split("/");
 			      					stripped = temp[0];
 			      				%>
-			      				( <%= stripped %> ) Tags: <a class="tag_label" href="#"><%= link.tags.first %></a>
+			      				( <%= stripped %> ) Tags: 
+			      				  <% @link.tags.each do |tag| %>
+								    <%= link_to tag.name class: "tag_label" %>
+								  <% end %>
 			      			</div>
 		      			</div>
 			      	</div>
