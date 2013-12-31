@@ -38,12 +38,4 @@ class UsersController < ApplicationController
 		flash.notice = "#{@user.handle} created"
 		redirect_to users_path(@user)
 	end
-
-	def auth
-		
-	end
-
-	def destroy
-		#placeholder
-	end
 end
