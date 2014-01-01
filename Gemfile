@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'rails_12factor'
 
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', :require => "bcrypt"
 
 gem 'paperclip', '~> 3.5.2'
 
