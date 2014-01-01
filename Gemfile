@@ -31,6 +31,8 @@ gem 'rails_12factor'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'paperclip', '~> 3.5.2'
+
 gem 'protected_attributes'
 
 group :doc do
