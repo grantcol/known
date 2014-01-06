@@ -22,8 +22,8 @@
 				  			<div>
 				      			<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 				      		</div>
-			      			<div class="link_subtitle_tag">
-			      				<!--<% 
+			      			<!--<div class="link_subtitle_tag">
+			      				<% 
 			      					url = link.url
 			      					stripped = url.slice!("https://")
 			      					if stripped != "https://"
@@ -32,9 +32,9 @@
 			      					temp = url.split("/");
 			      					stripped = temp[0];
 			      				%>->
-			      				<!--(<%= stripped %>) Tags: -->
+			      				<!--(<%= stripped %>) Tags: 
 			      				<a class="tag_label" href="#"><%= link.tags.first %></a>
-			      			</div>
+			      			</div>-->
 		      			</div>
 			      	</div>
 		  		<% end %>
