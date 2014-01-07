@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 	has_many :members
 	has_many :groups, through: :memnbers 
 
+	has_attached_file :image
   	attr_accessible :email, :password, :password_confirmation
   
   	attr_accessor :password
