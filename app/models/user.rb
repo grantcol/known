@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	has_many :groups, through: :memnbers 
 
 	has_attached_file :image, styles: { medium: "300x300>", thumb: "50x50>" }
-  	attr_accessible :email, :password, :password_confirmation
+  	attr_accessible :email, :password, :password_confirmation, :first, :last
   
   	attr_accessor :password
   	before_save :encrypt_password
