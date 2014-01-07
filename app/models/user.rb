@@ -5,8 +5,10 @@ class User < ActiveRecord::Base
 	has_many :groups, through: :memnbers 
 
 	has_attached_file :image, styles: { medium: "300x300>", thumb: "50x50>" }
-  	attr_accessible :email, :password, :password_confirmation, :first, :last
-  
+  	attr_accessible :email, :password, :password_confirmation, :first, :last, 
+  					:image_file_name, :image_content_type, :image_file_size,
+ 					:image_updated_at
+ 					
   	attr_accessor :password
   	before_save :encrypt_password
   
