@@ -16,7 +16,8 @@
 		  		<% @link.reverse_each do |link| %>
 			  		<div class="preview_container">
 			  			<div class="img_container">
-			  				<img class="circle" width="40" hieght="40" src="http://www.gravatar.com/avatar/e63d5e616a577605783b755cb6217434.png">
+			  				<!--<img class="circle" width="40" hieght="40" src="http://www.gravatar.com/avatar/e63d5e616a577605783b755cb6217434.png">-->
+			  				<%= current_user.picture %>
 			  			</div>
 			  			<div class="info_block">
 				  			<div>
