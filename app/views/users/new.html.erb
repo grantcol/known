@@ -2,8 +2,6 @@
 <html>
 	<body>
 		<%= form_for(@user, html: {multipart: true}) do |f| %>
-
-		<%= #form_for(@user) do |f| %>
 		  
 		  	<% @user.errors.full_messages.each do |error| %>
 		    
