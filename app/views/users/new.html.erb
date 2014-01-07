@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<%= form_for(@user) do |f| %>
+		<%= form_for(@user, html: {multipart: true}) do |f| %>
+
+		<%= #form_for(@user) do |f| %>
 		  
 		  	<% @user.errors.full_messages.each do |error| %>
 		    
@@ -29,6 +31,10 @@
 			    <div>
 			    	<%= f.text_field :password_confirmation, class: 'subtitle_box', placeholder: 'password' %>
 			    </div>
+			    <div>
+			      	<%= f.label :image, "Attach an Image" %><br />
+ 					<%= f.file_field :image %>
+ 				</div>
 			    <%= f.submit %>
 			</div>
 		</article>  
