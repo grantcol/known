@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
 	include UsersHelper
+
+	has_many :members
+	has_many :groups, through: :memnbers 
+
   	attr_accessible :email, :password, :password_confirmation
   
   	attr_accessor :password
