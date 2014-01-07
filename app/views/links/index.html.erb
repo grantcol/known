@@ -16,7 +16,7 @@
 		  		<% @link.reverse_each do |link| %>
 			  		<div class="preview_container">
 			  			<div class="img_container">
-			  				<%= image_tag current_user.image.url %>
+			  				<%= image_tag current_user.image.url, class: 'circle' %>
 			  			</div>
 			  			<div class="info_block">
 				  			<div>

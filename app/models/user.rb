@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
 	has_many :members
 	has_many :groups, through: :members 
 	has_attached_file :image, styles: { medium: "300x300>", thumb: "50x50>" }
+	                  :url  => "/assets/users/:id/:style/:basename.:extension",
+                      :path => ":rails_root/public/assets/users/:id/:style/:basename.:extension"
+
   	attr_accessible :email, :password, :password_confirmation, :first, :last, 
   					:image, :handle
 
