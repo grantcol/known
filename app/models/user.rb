@@ -2,16 +2,13 @@ class User < ActiveRecord::Base
 	include UsersHelper
 
 	has_many :members
-	has_many :groups, through: :memnbers 
-
+	has_many :groups, through: :members 
 	has_attached_file :image, styles: { medium: "300x300>", thumb: "50x50>" }
   	attr_accessible :email, :password, :password_confirmation, :first, :last, 
-  					:image_file_name, :image_content_type, :image_file_size,
- 					:image_updated_at
- 					
+  					:image, :handle
+
   	attr_accessor :password
   	before_save :encrypt_password
-  
   	validates_confirmation_of :password
   	validates_presence_of :password, :on => :create
   	validates_presence_of :email
