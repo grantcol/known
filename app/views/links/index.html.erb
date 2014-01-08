@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<div class="meta_bar">
+		<!--<div class="meta_bar">
 			<div class="meta_bar_actionbox">
 			  <%= link_to "+Link", link_path("new"), class: 'visited'%>
 			  <%= link_to "+Group", group_path("new"), class: 'visited'%>
@@ -27,6 +27,26 @@
 		      			</div>
 			      	</div>
 		  		<% end %>
+		  	</div>
+	  	</div>-->
+	  	<div class="feed_container">
+	  		<div class="action_bar">
+			  <%= link_to "+Link", link_path("new"), class: 'visited'%>
+			  <%= link_to "+Group", group_path("new"), class: 'visited'%>
+			  <%= link_to "Settings", class: 'visited'%>
+			  <%= link_to "Msgs" , class: 'visited'%>
+			  <input class="invisi-search" type="text" placeholder="search">
+		  	</div>
+		  	<div class="post_list">
+		  		<% @link.reverse_each do |link| %>
+			  		<div class="preview_container">
+			  			<div class="info_block">
+				  			<div>
+				      			<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+				      		</div>
+		      			</div>
+			      	</div>
+		  		<% end %>	  		
 		  	</div>
 	  	</div>
 	 </body>
