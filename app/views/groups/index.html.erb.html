@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div class="meta_bar">
+			<div class="meta_bar_actionbox">
+			  <%= link_to "New", user_path("/new"), class: 'visited'%>
+			  <%= link_to "Posts", posts_path, class: 'visited'%>
+			  <%= link_to "Links", links_path, class: 'visited'%>
+		  	</div>
+		</div>
+		<div class="feed_container">
+			<div class="post_list">
+		  		<% @groups.each do |group| %>
+			  		<div class="preview_container">
+			      		<div class="post_header">
+			      			<%= group.name %> 
+			      		</div>
+		      			<div class="post_subheader">
+		      				<%= group.description %>
+		      			</div>
+			      	</div>
+		  		<% end %>
+		  	</div>
+	  	</div>
+	 </body>
+</html>

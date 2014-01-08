@@ -16,5 +16,6 @@ Known::Application.routes.draw do
   resources :users
   resources :tags
   resources :groups
+  #resources :messages
 
 end
