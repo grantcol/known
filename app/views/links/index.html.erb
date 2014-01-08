@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<!--<div class="meta_bar">
-			<div class="meta_bar_actionbox">
-			  <%= link_to "+Link", link_path("new"), class: 'visited'%>
-			  <%= link_to "+Group", group_path("new"), class: 'visited'%>
-			  <%= link_to "Settings", class: 'visited'%>
-			  <%= link_to "Msgs" , class: 'visited'%>
-		  	</div>
-		</div>
-		<div class="feed_container">
-			<div class="post_list">
-				<div style="margin-bottom: 20px;">
-					<input class="invisi-search" type="text" placeholder="search">
-					<hr>
-				</div>
-		  		<% @link.reverse_each do |link| %>
-			  		<div class="preview_container">
-			  			<div class="img_container">
-			  				<%= image_tag current_user.image.url, class: 'circle' %>
-			  			</div>
-			  			<div class="info_block">
-				  			<div>
-				      			<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
-				      		</div>
-		      			</div>
-			      	</div>
-		  		<% end %>
-		  	</div>
-	  	</div>-->
 	  	<div class="feed_container">
 	  		<table>
 	  			<tr style="margin-bottom: 10px;">
@@ -40,29 +12,10 @@
 	  			</tr>
 	  			<% @link.reverse_each do |link| %>
 	  			<tr>
-	  				a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+	  				<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 	  			</tr>
 	  			<% end %>
 	  		</table>
-	  		<!--<div class="action_bar">
-			  <%= link_to "+Link", link_path("new"), class: 'visited'%>
-			  <%= link_to "+Group", group_path("new"), class: 'visited'%>
-			  <a href="#" class="visited">Search</a>
-			  <%= link_to "Settings", class: 'visited'%>
-			  <%= link_to "Msgs" , class: 'visited'%>
-			  <input class="invisi-search" type="text" placeholder="search">
-		  	</div>
-		  	<div class="post_list">
-		  		<% #@link.reverse_each do |link| %>
-			  		<div class="preview_container">
-	                  <div class="info_block">
-	                    <div>
-	                        <a href=<%= #link.url %> class="link_title_tag link_title"><%= #link.title %></a>
-	                    </div>
-	              	  </div>
-			      	</div>
-		  		<% #end %>	  		
-		  	</div>
-	  	</div>-->
+	  	</div>
 	 </body>
 </html>
