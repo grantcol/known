@@ -40,11 +40,26 @@
 		  	<div class="post_list">
 		  		<% @link.reverse_each do |link| %>
 			  		<div class="preview_container">
-			  			<div class="info_block">
-				  			<div>
-				      			<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
-				      		</div>
-		      			</div>
+	                  <div class="info_block">
+	                    <div>
+	                        <a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+	                    </div>
+	                      <div class="link_subtitle_tag">
+	                              <% 
+	                                      url = link.url
+	                                      stripped = url.slice!("https://")
+	                                      if stripped != "https://"
+	                                              stripped = url.slice!("http://")
+	                                      end
+	                                      temp = url.split("/");
+	                                      stripped = temp[0];
+	                              %>
+	                              ( <%= stripped %> ) 
+	                      </div>
+	                      <div style="display: block;">
+	                              <a class="tag_label" href="#"><%= link.tags.first %></a>
+	                      </div>
+	              		</div>
 			      	</div>
 		  		<% end %>	  		
 		  	</div>
