@@ -1,51 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<body>
-	  	<div class="feed_container" style="background-color: #ecf0f1;">
-	  		<table>
-	  			<tbody>
-	  			<tr>
-	  				<table bgcolor="#3498db" style="width: 100%;">
-	  					<tr>
-			  				<td><span class="nav_links"><%= link_to "Submit", link_path("new"), class: 'nav_link' %></span>
-			  				<span class="nav_links"><%= link_to "Create", group_path("new"), class: 'nav_link' %></span>			 <span class="nav_links"><%= link_to "Messages", link_path("new"), class: 'nav_link' %></span>
-			  				<span class="nav_links"><a href="#" class="nav_link">Search</a></span>
-			  				<% if current_user %>
-								<span class="nav_links" style="float: right;"><%= current_user.handle %> | 
-							    <%= link_to "Log out", log_out_path , class: 'nav_link'%></span>
-							<% else %>
-							    <span class="nav_links" style="float: right;"><%= link_to "Sign up", sign_up_path , class: 'nav_link'%></span> or
-							    <span class="nav_links" style="float: right;"><%= link_to "log in", log_in_path , class: 'nav_link'%></span>
-							<% end %>
-			  				</td>
-			  			</tr>
-	  				</table>
-	  			</tr>
-	  			<tr style="height:10px"></tr>
-	  			<tr>
-	  				<table>
-	  					<% @link.reverse.each_with_index do |link, i| %>
-	  					<tr>
-		  					<td>
-		  						<%= i + 1 %>.	 
-		  					</td>
-		  					<td>
-		  						<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
-		  					</td>
-	  					</tr>
-	  					<% end %>
-	  				</table>
-	  			</tr>
-	  			<tr style="height:15px background-color: #3498db; width: 100%;"></tr>
-	  			<tr>
-	  				<table>
-	  					<tr>
-  						
-	  					</tr>
-	  				</table>
-	  			</tr>
-	  			</tbody>
-	  		</table>
-	  	</div>
-	 </body>
-</html>
+
+<% @link.reverse.each_with_index do |link, i| %>
+<tr>
+	<td>
+		<%= i + 1 %>.	 
+	</td>
+	<td>
+		<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+	</td>
+</tr>
+<% end %>
