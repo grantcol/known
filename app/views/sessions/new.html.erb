@@ -1,13 +1,11 @@
-<div class="editor_body">
-	<h1>Log in</h1>
+<h3>Log in</h3>
 
-	<%= form_tag sessions_path do %>
-	  <p>
-	    <%= text_field_tag :email, params[:email], class: 'subtitle_box', placeholder: 'Email'%>
-	  </p>
-	  <p>
-	    <%= password_field_tag :password, class: 'subtitle_box', placeholder: 'Password'%>
-	  </p>
-	  <p class="button"><%= submit_tag "Log in" %></p>
-	<% end %>
-</div>
+<%= form_tag sessions_path do %>
+  <p>
+    <%= text_field_tag :email, params[:email], class: 'subtitle_box', placeholder: 'Email'%>
+  </p>
+  <p>
+    <%= password_field_tag :password, class: 'subtitle_box', placeholder: 'Password'%>
+  </p>
+  <p class="button"><%= submit_tag "Log in" %></p>
+<% end %>

@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<body>
-	<%= form_for(@group) do |f| %>
-	  
-	  	<% @group.errors.full_messages.each do |error| %>
-	    
-		<%= error %>
+<%= form_for(@group) do |f| %>
+  
+  	<% @group.errors.full_messages.each do |error| %>
+    
+	<%= error %>
 
-	<% end %>
-	  
-	<article>
-		<div class="editor_body">
-		    <div>
-		    	<%= f.text_field :name , class: 'title_box' , placeholder: 'group name' %>
-		    </div>
-		    <div>
-		    	<%= f.text_area :desc , class: 'title_box' , placeholder: 'description' %>
-		    </div>
-		    <%= f.submit %>
-		</div>
-	</article> 
-	<% end %>
-</body>
-</html> 
+<% end %>
+  
+	    <div>
+	    	<%= f.text_field :name , class: 'title_box' , placeholder: 'group name' %>
+	    </div>
+	    <div>
+	    	<%= f.text_area :desc , class: 'title_box' , placeholder: 'description' %>
+	    </div>
+	    <%= f.submit %>
+
+<% end %>

@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html>
-<body>
 <%= form_for(@link) do |f| %>
-  
-  	<% @link.errors.full_messages.each do |error| %>
-    
-	<%= error %>
 
-	<% end %>
-  
-<article>
-	<div class="editor_body">
-	    <div>
-	    	<%= f.text_field :title , class: 'title_box' , placeholder: 'title' %>
-	    </div>
-	    <div>
-	    	<%= f.text_field :url, class: 'title_box', placeholder: 'url' %>
-	    </div>
-	    <%= f.submit %>
-	</div>
-</article> 
+	<% @link.errors.full_messages.each do |error| %>
+
+<%= error %>
+
 <% end %>
-</body>
-</html> 
+    <div>
+    	<%= f.text_field :title , class: 'title_box' , placeholder: 'title' %>
+    </div>
+    <div>
+    	<%= f.text_field :url, class: 'title_box', placeholder: 'url' %>
+    </div>
+    <%= f.submit %>
+
+<% end %>
