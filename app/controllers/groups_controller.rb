@@ -1,15 +1,15 @@
 class GroupsController < ApplicationController
 
 	def index 
-		@group = Groups.all
+		@group = Group.all
 	end
 
 	def new 
-		@group = Groups.new
+		@group = Group.new
 	end
 
 	def create
-		@group = Groups.new
+		@group = Group.new
 		@group.save
 		flash.notice = "#{@group.name} created!"
 		redirect_to links_path(@group)
