@@ -10,9 +10,9 @@
 	  				<td><%= link_to "Messages" , class: 'visited'%></td>
 	  				<td><%= link_to "Settings", class: 'visited'%></td>
 	  			</tr>
-	  			<% @link.reverse_each do |link| %>
+	  			<% @link.each do |link| %>
 	  			<tr>
-	  				Hello
+	  				<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 	  			</tr>
 	  			<% end %>
 	  		</table>
