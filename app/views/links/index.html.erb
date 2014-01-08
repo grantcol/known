@@ -18,10 +18,11 @@
 	  			<tr style="height:10px"></tr>
 	  			<tr>
 	  				<table>
-	  					<% @link.each do |link, i| %>
+	  					<% i = 0 %>
+	  					<% @link.each do |link| %>
 	  					<tr>
 		  					<td>
-		  						<%= i %>. 
+		  						<%= i++ %>. 
 		  					</td>
 		  					<td>
 		  						<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
