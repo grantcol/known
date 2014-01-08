@@ -1,0 +1,19 @@
+<%= form_for(@group) do |f| %>
+  
+  	<% @group.errors.full_messages.each do |error| %>
+    
+	<%= error %>
+
+	<% end %>
+  
+<article>
+	<div class="editor_body">
+	    <div>
+	    	<%= f.text_field :title , class: 'title_box' , placeholder: 'Link Title' %>
+	    </div>
+	    <div>
+	    	<%= f.text_field :url , class: 'title_box' , placeholder: 'Url here' %>
+	    </div>
+	    <%= f.submit %>
+	</div>
+</article>  
