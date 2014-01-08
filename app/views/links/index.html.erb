@@ -30,7 +30,19 @@
 	  				</table>
 	  			</tr>
 	  			<tr>
-	  				<table></table>
+	  				<table>
+	  					<tr>
+			  				<td>
+							  <% if current_user %>
+							    Logged in as <%= current_user.handle %>.
+							    <%= link_to "Log out", log_out_path %>
+							  <% else %>
+							    <%= link_to "Sign up", sign_up_path %> or
+							    <%= link_to "log in", log_in_path %>
+							  <% end %>
+			  				</td>	  						
+	  					</tr>
+	  				</table>
 	  			</tr>
 	  			</tbody>
 	  		</table>
