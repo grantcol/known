@@ -15,13 +15,13 @@
 			  			</tr>
 	  				</table>
 	  			</tr>
-	  			<tr style="height:5px"></tr>
+	  			<tr style="height:10px"></tr>
 	  			<tr>
 	  				<table>
-	  					<% @link.each do |link| %>
+	  					<% @link.each do |link, i| %>
 	  					<tr>
 		  					<td>
-		  						score
+		  						<%= i %>. 
 		  					</td>
 		  					<td>
 		  						<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
