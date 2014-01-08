@@ -10,7 +10,15 @@
 			  				<td><span class="nav_links"><%= link_to "Submit", link_path("new"), class: 'nav_link' %></span>
 			  				<span class="nav_links"><%= link_to "Create", group_path("new"), class: 'nav_link' %></span>			 <span class="nav_links"><%= link_to "Messages", link_path("new"), class: 'nav_link' %></span>
 			  				<span class="nav_links"><%= link_to "Settings", link_path("new"), class: 'nav_link' %></span>
-			  				<span class="nav_links"><a href="#" class="nav_link">Search</a></span></td>
+			  				<span class="nav_links"><a href="#" class="nav_link">Search</a></span>
+			  				<% if current_user %>
+								<span class="nav_links"><%= current_user.handle %> | 
+							    <%= link_to "Log out", log_out_path %></span>
+							<% else %>
+							    <span class="nav_links"><%= link_to "Sign up", sign_up_path %> or
+							    <%= link_to "log in", log_in_path %></span>
+							<% end %>
+			  				</td>
 			  			</tr>
 	  				</table>
 	  			</tr>
@@ -29,7 +37,7 @@
 	  					<% end %>
 	  				</table>
 	  			</tr>
-	  			<tr><td style="height:10px background-color: #3498db; width: 100%;"></td></tr>
+	  			<tr style="height:15px background-color: #3498db; width: 100%;"></tr>
 	  			<tr>
 	  				<table>
 	  					<tr>
