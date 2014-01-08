@@ -1,37 +1,32 @@
-<!DOCTYPE html>
-<html>
-<body>
-	<%= form_for(@user, html: {multipart: true}) do |f| %>
-	  
-	  	<% @user.errors.full_messages.each do |error| %>
-	    
-			<%= error %>
+<%= form_for(@user, html: {multipart: true}) do |f| %>
+  
+  	<% @user.errors.full_messages.each do |error| %>
+    
+		<%= error %>
 
-		<% end %>
-
-		    <div>
-		    	<%= f.text_field :first, placeholder: 'First name' %>
-		    </div>
-		    <div>
-		    	<%= f.text_field :last, placeholder: 'Last name' %>
-		    </div>
-		    <div>
-		    	<%= f.text_field :email, placeholder: 'Email' %>
-		    </div>
-		    <div>
-		    	<%= f.text_field :handle, placeholder: '@your-cool-handle' %>
-		    </div>
-		    <div>
-		    	<%= f.text_field :password, placeholder: 'password' %>
-		    </div>
-		    <div>
-		    	<%= f.text_field :password_confirmation, placeholder: 'password' %>
-		    </div>
-		    <div>
-		      	<%= f.label :image, "Attach an Image" %><br />
-					<%= f.file_field :image %>
-				</div>
-		    <%= f.submit %> 
 	<% end %>
-</body>
-</html>
+
+	    <div>
+	    	<%= f.text_field :first, placeholder: 'First name' %>
+	    </div>
+	    <div>
+	    	<%= f.text_field :last, placeholder: 'Last name' %>
+	    </div>
+	    <div>
+	    	<%= f.text_field :email, placeholder: 'Email' %>
+	    </div>
+	    <div>
+	    	<%= f.text_field :handle, placeholder: '@your-cool-handle' %>
+	    </div>
+	    <div>
+	    	<%= f.text_field :password, placeholder: 'password' %>
+	    </div>
+	    <div>
+	    	<%= f.text_field :password_confirmation, placeholder: 'password' %>
+	    </div>
+	    <div>
+	      	<%= f.label :image, "Attach an Image" %><br />
+				<%= f.file_field :image %>
+			</div>
+	    <%= f.submit %> 
+<% end %>
