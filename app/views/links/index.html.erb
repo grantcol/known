@@ -13,10 +13,10 @@
 			  				<span class="nav_links"><a href="#" class="nav_link">Search</a></span>
 			  				<% if current_user %>
 								<span class="nav_links"><%= current_user.handle %> | 
-							    <%= link_to "Log out", log_out_path %></span>
+							    <%= link_to "Log out", log_out_path , class: 'nav_link'%></span>
 							<% else %>
-							    <span class="nav_links"><%= link_to "Sign up", sign_up_path %> or
-							    <%= link_to "log in", log_in_path %></span>
+							    <span class="nav_links"><%= link_to "Sign up", sign_up_path , class: 'nav_link'%> or
+							    <%= link_to "log in", log_in_path , class: 'nav_link'%></span>
 							<% end %>
 			  				</td>
 			  			</tr>
@@ -41,15 +41,7 @@
 	  			<tr>
 	  				<table>
 	  					<tr>
-			  				<td>
-							  <% if current_user %>
-							    Logged in as <%= current_user.handle %>.
-							    <%= link_to "Log out", log_out_path %>
-							  <% else %>
-							    <%= link_to "Sign up", sign_up_path %> or
-							    <%= link_to "log in", log_in_path %>
-							  <% end %>
-			  				</td>	  						
+  						
 	  					</tr>
 	  				</table>
 	  			</tr>
