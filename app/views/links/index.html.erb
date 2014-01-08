@@ -30,25 +30,39 @@
 		  	</div>
 	  	</div>-->
 	  	<div class="feed_container">
-	  		<div class="action_bar">
+	  		<table>
+	  			<tr style="margin-bottom: 10px;">
+	  				<td><%= link_to "Submit", link_path("new"), class: 'visited'%></td>
+	  				<td><%= link_to "Create", group_path("new"), class: 'visited'%></td>
+	  				<td><a href="#" class="visited">Search</a></td>
+	  				<td><%= link_to "Messages" , class: 'visited'%></td>
+	  				<td><%= link_to "Settings", class: 'visited'%></td>
+	  			</tr>
+	  			<% @link.reverse_each do |link| %>
+	  			<tr>
+	  				a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+	  			</tr>
+	  			<% end %>
+	  		</table>
+	  		<!--<div class="action_bar">
 			  <%= link_to "+Link", link_path("new"), class: 'visited'%>
 			  <%= link_to "+Group", group_path("new"), class: 'visited'%>
+			  <a href="#" class="visited">Search</a>
 			  <%= link_to "Settings", class: 'visited'%>
 			  <%= link_to "Msgs" , class: 'visited'%>
-			  <a href="#" class="visited">Search</a>
-			  <!--<input class="invisi-search" type="text" placeholder="search">-->
+			  <input class="invisi-search" type="text" placeholder="search">
 		  	</div>
 		  	<div class="post_list">
-		  		<% @link.reverse_each do |link| %>
+		  		<% #@link.reverse_each do |link| %>
 			  		<div class="preview_container">
 	                  <div class="info_block">
 	                    <div>
-	                        <a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+	                        <a href=<%= #link.url %> class="link_title_tag link_title"><%= #link.title %></a>
 	                    </div>
 	              	  </div>
 			      	</div>
-		  		<% end %>	  		
+		  		<% #end %>	  		
 		  	</div>
-	  	</div>
+	  	</div>-->
 	 </body>
 </html>
