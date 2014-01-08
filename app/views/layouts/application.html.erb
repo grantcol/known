@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 	<body>
-		<!--<%= flash.notice %>	
+		<%= flash.notice %>	
 		<%= yield %>
 		<div id="user_nav">
 		  <% if current_user %>
@@ -21,6 +21,6 @@
 
 		<% flash.each do |name, msg| %>
 		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-		<% end %>-->
+		<% end %>
 	</body>
 </html>
