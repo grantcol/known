@@ -5,7 +5,6 @@
 	  		<table>
 	  			<tbody>
 	  			<tr>
-	  				<td>
 		  				<table>
 		  					<tr>
 				  				<td><%= link_to "Submit", link_path("new"), class: 'visited'%></td>
@@ -15,12 +14,11 @@
 				  				<td><%= link_to "Settings", class: 'visited'%></td>
 				  			</tr>
 		  				</table>
-	  				<td>
 	  			</tr>
 	  			<tr style="height:5px"></tr>
 	  			<tr>
-	  				<% @link.each do |link| %>
 	  				<table>
+	  					<% @link.each do |link| %>
 	  					<tr>
 		  					<td>
 		  						score
@@ -29,6 +27,7 @@
 		  						<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 		  					</td>
 	  					</tr>
+	  					<% end %>
 	  				</table>
 	  			</tr>
 	  			</tbody>
