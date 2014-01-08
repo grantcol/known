@@ -3,7 +3,7 @@
 	<body>
 	  	<div class="feed_container">
 	  		<table>
-	  			<tr style="margin-bottom: 10px;">
+	  			<tr>
 	  				<td><%= link_to "Submit", link_path("new"), class: 'visited'%></td>
 	  				<td><%= link_to "Create", group_path("new"), class: 'visited'%></td>
 	  				<td><a href="#" class="visited">Search</a></td>
@@ -12,7 +12,7 @@
 	  			</tr>
 	  			<% @link.reverse_each do |link| %>
 	  			<tr>
-	  				<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+	  				Hello
 	  			</tr>
 	  			<% end %>
 	  		</table>
