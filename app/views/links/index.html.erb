@@ -35,7 +35,8 @@
 			  <%= link_to "+Group", group_path("new"), class: 'visited'%>
 			  <%= link_to "Settings", class: 'visited'%>
 			  <%= link_to "Msgs" , class: 'visited'%>
-			  <input class="invisi-search" type="text" placeholder="search">
+			  <a href="#" class="visited">Search</a>
+			  <!--<input class="invisi-search" type="text" placeholder="search">-->
 		  	</div>
 		  	<div class="post_list">
 		  		<% @link.reverse_each do |link| %>
@@ -44,7 +45,7 @@
 	                    <div>
 	                        <a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 	                    </div>
-	                      <div class="link_subtitle_tag">
+	                    <!--<div class="link_subtitle_tag">
 	                              <% 
 	                                      url = link.url
 	                                      stripped = url.slice!("https://")
@@ -58,7 +59,7 @@
 	                      </div>
 	                      <div style="display: block;">
 	                              <a class="tag_label" href="#"><%= link.tags.first %></a>
-	                      </div>
+	                      </div>-->
 	              		</div>
 			      	</div>
 		  		<% end %>	  		
