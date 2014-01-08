@@ -11,7 +11,7 @@ class LinksController < ApplicationController
 		@link = Link.new(link_params)
 		@link.save
 		flash.notice = "#{@link.title} added to the link box"
-		redirect_to links_path(@link)
+		redirect_to links_path
 	end
 	
 	def index
