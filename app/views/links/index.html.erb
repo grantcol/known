@@ -2,16 +2,16 @@
 <html>
 	<body>
 	  	<div class="feed_container">
-	  		<table>
+	  		<table bgcolor="#ecf0f1">
 	  			<tbody>
 	  			<tr>
-	  				<table bgcolor="#3498db" style="width: 100%;">
+	  				<table bgcolor="#3498db" style="width: 100%; color: #fff">
 	  					<tr>
-			  				<td><%= link_to "Submit", link_path("new"), class: 'visited'%></td>
-			  				<td><%= link_to "Create", group_path("new"), class: 'visited'%></td>
-			  				<td><a href="#" class="visited">Search</a></td>
-			  				<td><%= link_to "Messages" , class: 'visited'%></td>
-			  				<td><%= link_to "Settings", class: 'visited'%></td>
+			  				<span class="nav_links"><%= link_to "Submit", link_path("new"), class: 'visited'%></span>
+			  				<span class="nav_links"><%= link_to "Create", group_path("new"), class: 'visited'%></span>
+			  				<span class="nav_links"><a href="#" class="visited">Search</a></span>
+			  				<span class="nav_links"><%= link_to "Messages" , class: 'visited'%></span>
+			  				<span class="nav_links"><%= link_to "Settings", class: 'visited'%></span>
 			  			</tr>
 	  				</table>
 	  			</tr>
