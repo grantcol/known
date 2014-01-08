@@ -13,7 +13,6 @@ Known::Application.routes.draw do
   resources :sessions
   resources :posts
   resources :links
-  resources :users
   resources :tags
   resources :groups
   #resources :messages
