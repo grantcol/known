@@ -4,6 +4,11 @@
 	  	<div class="feed_container">
 	  		<table>
 	  			<tbody>
+	  			<% @link.each do |link| %>
+	  			<tr>
+	  				<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+	  			</tr>
+	  			<% end %>	  				
 	  			<tr>
 	  				<td><%= link_to "Submit", link_path("new"), class: 'visited'%></td>
 	  				<td><%= link_to "Create", group_path("new"), class: 'visited'%></td>
@@ -11,11 +16,6 @@
 	  				<td><%= link_to "Messages" , class: 'visited'%></td>
 	  				<td><%= link_to "Settings", class: 'visited'%></td>
 	  			</tr>
-	  			<% @link.each do |link| %>
-	  			<tr>
-	  				<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
-	  			</tr>
-	  			<% end %>
 	  			</tbody>
 	  		</table>
 	  	</div>
