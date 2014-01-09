@@ -1,5 +1,7 @@
-<% @group.each do |group| %>
+
+<% @group.each_with_index do |group, i| %>
 <tr>
+	<td align="right"><%= i + 1 %></td>
 	<td><%= link_to group.name, group_path(group), class: 'link_title_tag link_title' %></td>
 	<td class="tag_link"><%= group.description %></td>
 </tr>

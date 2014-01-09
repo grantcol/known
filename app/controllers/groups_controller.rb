@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
-
+	include GroupsHelper
+	
 	def index 
 		@group = Group.all
 	end
