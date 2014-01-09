@@ -6,8 +6,6 @@
 	</td>
 	<td>
 		<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
-	</td>
-	<td>
 		<% 
 	     	url = link.url
 	        stripped = url.slice!("https://")
@@ -18,6 +16,6 @@
 	        stripped = temp[0];
  		%>
  	( <%= stripped %> )
- 	</td>
+	</td>
 </tr>
 <% end %>
