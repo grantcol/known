@@ -9,7 +9,9 @@ class LinksController < ApplicationController
 	end
 
 	def create
-		@link = Link.new(link_params)
+		@link = Link.new(:title    => params[:title], 
+						 :url      => params[:url], 
+						 :tag_list => params[:tag_list])#Link.new(link_params)
 		@link.save
 		flash.notice = "#{@link.title} added to the link box"
 		redirect_to links_path
