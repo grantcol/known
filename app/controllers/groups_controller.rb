@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 	end
 
 	def create
-		@group = Group.new
+		@group = Group.new(group_params)
 		@group.save
 		flash.notice = "#{@group.name} created!"
 		redirect_to links_path(@group)

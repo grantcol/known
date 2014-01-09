@@ -15,7 +15,16 @@
 	        temp = url.split("/");
 	        stripped = temp[0];
  		%>
- 	( <%= stripped %> )
+ 	(<%= stripped %>)
+	</td>
+</tr>
+<tr>
+	<td></td>
+	<td>
+		Tags:
+		  <% @link.tags.each do |tag| %>
+		    <%= link_to tag.name, tag_path(tag) %>
+		  <% end %>
 	</td>
 </tr>
 <% end %>
