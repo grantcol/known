@@ -22,7 +22,7 @@
 	<td></td>
 	<td>
 		Tags:
-		  <% @link.tags.each do |tag| %>
+		  <% link.tags.each do |tag| %>
 		    <%= link_to tag.name, tag_path(tag) %>
 		  <% end %>
 	</td>
