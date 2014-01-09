@@ -1,0 +1,7 @@
+<% @user %>
+<div>
+	<h2><%= @user.first %> <%= @user.last %></h2>
+	<h3><%= @user.handle %></h2>
+		<hr>
+	<p>Following: <%= @user.followed_users.count %> Followers: <%= @user.followers.count %></p>
+</div>
