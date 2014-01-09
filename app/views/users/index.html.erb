@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<body>
-		<div class="meta_bar">
-			<div class="meta_bar_actionbox">
-			  <%= link_to "New", user_path("/new"), class: 'visited'%>
-			  <%= link_to "Posts", posts_path, class: 'visited'%>
-			  <%= link_to "Links", links_path, class: 'visited'%>
-		  	</div>
-		</div>
-		<div class="feed_container">
-			<div class="post_list">
-		  		<% @users.each do |user| %>
-			  		<div class="preview_container">
-			      		<div class="post_header">
-			      			<%= user.first %> 
-			      		</div>
-		      			<div class="post_subheader">
-		      				<%= user.handle %>
-		      			</div>
-			      	</div>
-		  		<% end %>
-		  	</div>
-	  	</div>
-	 </body>
-</html>
+
+<% @users.each do |user| %>
+	<tr>
+		<td>
+			<%= user.first %> <%= user.last %> 
+		</td>
+		<td>
+			<%= user.handle %>
+		</td>
+	</tr>
+<% end %>
