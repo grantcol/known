@@ -1,6 +1,8 @@
-<div>
+<div style="text-align: center;">
 	<h2><%= @user.first %> <%= @user.last %></h2>
-	<h3><%= @user.handle %></h2>
-		<hr>
-	<p> following <%= @user.followed_users.count %> | <%= @user.followers.count %> followers | <%= @user.links.count %> links </p>
+	<h3><%= @user.handle %></h3>
+	<hr>
+	<p> <%= link_to "Following", following_user_path(@user), class: 'visited' %>
+		<%= @user.followed_users.count %> | 
+		<%= @user.followers.count %> <%= link_to "Followers", ffollowers_user_path(@user), class: 'visited' %> 
 </div>

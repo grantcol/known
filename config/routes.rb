@@ -9,7 +9,12 @@ Known::Application.routes.draw do
   post 'links/recieve'
   post 'links/updateExtension'
 
-  resources :users
+  #resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :sessions
   resources :posts
   resources :links
