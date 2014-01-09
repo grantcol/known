@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
 	include LinksHelper
-	
+
 	protect_from_forgery :secret => 'biscuits',  
 	                     :except => [ :recieve, :updateExtension ]
 
