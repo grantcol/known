@@ -10,7 +10,7 @@
 </tr>
 
 <tr>
-	<% 
+	<td><% 
      	url = link.url
         stripped = url.slice!("https://")
         if stripped != "https://"
@@ -20,5 +20,5 @@
         stripped = temp[0];
  	%>
  ( <%= stripped %> )
-</tr>
+</tr></td>
 <% end %>
