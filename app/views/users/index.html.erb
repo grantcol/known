@@ -2,10 +2,7 @@
 <% @users.each do |user| %>
 	<tr>
 		<td>
-			<%= user.first %> <%= user.last %> 
-		</td>
-		<td>
-			<%= user.handle %>
+			<a href= <%= user_path(@user) %> class="visited"><%= user.first %><%= user.last %></a> (<%= user.handle %>)
 		</td>
 	</tr>
 <% end %>
