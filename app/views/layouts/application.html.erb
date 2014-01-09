@@ -32,11 +32,15 @@
 			  				<span class="nav_links"><%= link_to "Create", group_path("new"), class: 'nav_link' %></span>			 <span class="nav_links"><%= link_to "Messages", link_path("new"), class: 'nav_link' %></span>
 			  				<span class="nav_links"><a href="#" class="nav_link">Search</a></span>
 			  				<% if current_user %>
-								<span class="nav_links" style="float: right;"><%= current_user.handle %> | 
-							    <%= link_to "Log out", log_out_path , class: 'nav_link'%></span>
+								<span class="nav_links" style="float: right;">
+									<%= current_user.handle %> | 
+							    	<%= link_to "Log out", log_out_path , class: 'nav_link'%>
+							    </span>
 							<% else %>
-							    <span class="nav_links" style="float: right;"><%= link_to "Sign up", sign_up_path , class: 'nav_link'%></span>
-							    <span class="nav_links" style="float: right;"><%= link_to "Log in", log_in_path , class: 'nav_link'%></span>
+							    <span class="nav_links" style="float: right;">
+							    	<%= link_to "Sign up", sign_up_path , class: 'nav_link'%> | 
+							    	<%= link_to "Log in", log_in_path , class: 'nav_link'%>
+							    </span>
 							<% end %>
 			  				</td>
 			  			</tr>
