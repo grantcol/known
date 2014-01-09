@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	include UsersHelper
-
+	has_many :links
 	has_many :members
 	has_many :groups, through: :members 
 	has_attached_file :image , #styles: { medium: "300x300>", thumb: "50x50>" },
