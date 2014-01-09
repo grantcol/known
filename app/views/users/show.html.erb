@@ -4,5 +4,10 @@
 	<hr>
 	<p> <%= link_to "Following", following_user_path(@user), class: 'visited' %>
 		<%= @user.followed_users.count %> | 
-		<%= @user.followers.count %> <%= link_to "Followers", followers_user_path(@user), class: 'visited' %> 
+		<%= link_to "Followers", followers_user_path(@user), class: 'visited' %> 
+		<%= @user.followers.count %> 
+	</p>
+	<p>
+		<% render 'follow_form' %>
+	</p>
 </div>
