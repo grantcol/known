@@ -1,6 +1,6 @@
-<tr>
-	<td><h2>#<%= @tag.name %></h2></td>
-<tr>
+<table>
+	<tr><td><h2><%= @tag.name %></h2></td></tr>
+</table>
  <% @tag.links.each_with_index do |link, i| %>
   <tr>
 	<td>
@@ -8,6 +8,16 @@
 	</td>
 	<td>
     	<%= link_to link.title, link_path(link), class: 'link_title_tag link_title' %>
+    	<% 
+		     	url = link.url
+		        stripped = url.slice!("https://")
+		        if stripped != "https://"
+		           stripped = url.slice!("http://")
+		        end
+		        temp = url.split("/");
+		        stripped = temp[0];
+	 	%>
+	 	(<%= stripped %>)
 	</td>
   </tr>
 <% end %>
