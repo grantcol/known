@@ -29,7 +29,7 @@
 	  				<table bgcolor="#3498db" style="width: 100%;">
 	  					<tr>
 			  				<td><span class="nav_links"><%= link_to "Submit", link_path("new"), class: 'nav_link' %></span>
-			  				<span class="nav_links"><%= link_to "Circuits", group_path("new"), class: 'nav_link' %></span>	
+			  				<span class="nav_links"><%= link_to "Circuits", groups_path, class: 'nav_link' %></span>	
 							<span class="nav_links"><%= link_to "Discover", tags_path, class: 'nav_link' %></span>
 			  				<span class="nav_links"><a href="#" class="nav_link">Search</a></span>
 			  				<% if current_user %>
