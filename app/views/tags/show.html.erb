@@ -1,5 +1,5 @@
 <h3>#<%= @tag.name %></h3>
-  <% @tag.links.each do |link| %>
+  <% @tag.links.each_with_index do |link| %>
   <tr>
 	<td>
 		<%= i + 1 %>.	 
