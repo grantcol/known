@@ -4,7 +4,7 @@ class CreateRelationships < ActiveRecord::Migration
       t.integer :follower_id
       t.integer :followed_id
       #specification column is for tracking what streams one user follows another for
-      t.string  :specification, :array = true, :default = {} 
+      t.string  :specification, array: true, default: []
       t.timestamps
     end
     add_index :relationships, :follower_id
