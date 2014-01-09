@@ -23,7 +23,7 @@
 	<td class="link_subtitle_tag">
 		Tags:
 		  <% link.tags.each do |tag| %>
-		    <%= link_to tag.name, tag_path(tag)%>
+		    <%= link_to tag.name, tag_path(tag), class: 'tag_link' %>
 		  <% end %>
 	</td>
 </tr>
