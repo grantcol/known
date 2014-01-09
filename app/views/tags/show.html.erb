@@ -1,0 +1,11 @@
+<h3>#<%= @tag.name %></h3>
+  <% @tag.links.each do |link| %>
+  <tr>
+	<td>
+		<%= i + 1 %>.	 
+	</td>
+	<td>
+    	<tr><%= link_to link.title, link_path(link), class: 'visited' %></tr>
+	</td>
+  </tr>
+  <% end %>

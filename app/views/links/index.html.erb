@@ -8,4 +8,17 @@
 		<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
 	</td>
 </tr>
+
+<tr>
+	<% 
+     	url = link.url
+        stripped = url.slice!("https://")
+        if stripped != "https://"
+           stripped = url.slice!("http://")
+        end
+        temp = url.split("/");
+        stripped = temp[0];
+ 	%>
+ ( <%= stripped %> )
+</tr>
 <% end %>
