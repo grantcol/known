@@ -1,5 +1,5 @@
 <h3>#<%= @tag.name %></h3>
-  <% @tag.links.each_with_index do |link| %>
+ <% @tag.links.each_with_index do |link, i| %>
   <tr>
 	<td>
 		<%= i + 1 %>.	 
@@ -8,4 +8,4 @@
     	<tr><%= link_to link.title, link_path(link), class: 'visited' %></tr>
 	</td>
   </tr>
-  <% end %>
+<% end %>
