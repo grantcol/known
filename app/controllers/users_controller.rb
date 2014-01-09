@@ -19,4 +19,8 @@ class UsersController < ApplicationController
 	    render "new"
 	  end
 	end
+	
+	def current_user?(user)
+    	user == current_user
+  	end
 end
