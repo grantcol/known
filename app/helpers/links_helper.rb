@@ -1,5 +1,5 @@
 module LinksHelper
-	def post_params
+	def link_params
     	params.require(:link).permit(:title, :url, :tag_list)
   	end
 end
