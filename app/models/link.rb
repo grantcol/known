@@ -16,7 +16,7 @@ class Link < ActiveRecord::Base
 		self.tags = new_or_found_tags
 	end
 
-	# Returns microposts from the users being followed by the given user.
+	# Returns links from the users being followed by the given user.
 	def self.from_users_followed_by(user)
 	    followed_user_ids = "SELECT followed_id FROM relationships
 	                         WHERE follower_id = :user_id"
