@@ -8,9 +8,9 @@ class StaticPagesController < ApplicationController
 	def inquire
 	end
 
-	def request
+	def request_feature
 	end
 
-	def report
+	def report_bug
 	end
 end

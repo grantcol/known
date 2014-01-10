@@ -7,9 +7,8 @@ Known::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   get "static_pages/about"
   get "static_pages/inquire"
-  get "static_pages/request"
-  get "static_pages/report"
-  get "static_pages/blog"
+  get "static_pages/request_feature"
+  get "static_pages/report_bug"
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'
