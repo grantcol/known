@@ -11,7 +11,7 @@
 	  		<table>
 	  			<tbody>
 	  			<tr>
-	  				<table bgcolor="#34495e" style="width: 100%;">
+	  				<table bgcolor="#3498db" style="width: 100%;">
 	  					<tr>
 			  				<td>
 			  				<span class="nav_links"><%= link_to "Home", links_path, class: 'nav_link' %> |</span> 
@@ -62,30 +62,32 @@
 	  			</tr>-->
 	  			</tbody>
 	  		</table>
-	  		<table id="layout_footer">
-	  			<tbody>
-	  				<tr>
-						<table width="100%" bgcolor="#34495e" cellpadding="0">
-							<tbody>
-								<tr><td></td></tr>
-							</tbody>
-						</table>
-		  			</tr>
-	  				<tr>
-		  				<td>
-		  					<div align="center">
-		  						<a href=<%= static_pages_about_path %> class="visited">About</a>
-		  						|
-		  						<a href=<%= static_pages_inquire_path %> class="visited">Inquire</a>
-		  						|
-		  						<a href=<%= static_pages_request_feature_path %> class="visited">Request Feature</a>
-		  						|
-		  						<a href=<%= static_pages_report_bug_path %> class="visited">Report Bug</a>
-		  					</div>
-		  				</td>
-	  				</tr>
-	  			</tbody>
-	  		</table>
+	  		<div id="layout_footer">
+		  		<table>
+		  			<tbody>
+		  				<tr>
+							<table width="100%" bgcolor="#3498db" cellpadding="0">
+								<tbody>
+									<tr><td></td></tr>
+								</tbody>
+							</table>
+			  			</tr>
+		  				<tr>
+			  				<td>
+			  					<div align="center">
+			  						<a href=<%= static_pages_about_path %> class="visited">About</a>
+			  						|
+			  						<a href=<%= static_pages_inquire_path %> class="visited">Inquire</a>
+			  						|
+			  						<a href=<%= static_pages_request_feature_path %> class="visited">Request Feature</a>
+			  						|
+			  						<a href=<%= static_pages_report_bug_path %> class="visited">Report Bug</a>
+			  					</div>
+			  				</td>
+		  				</tr>
+		  			</tbody>
+		  		</table>
+	  		</div>
 	  	</div>
 	</body>
 </html>
