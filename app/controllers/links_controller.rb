@@ -9,8 +9,9 @@ class LinksController < ApplicationController
 	end
 
 	def create
-		@link = Link.new(link_params)
-		@link.user_id = current_user
+		#@link = Link.new(link_params)
+		#@link.user_id = current_user
+		@link = current_user.links.build(link_params)
 		@link.save
 		flash.notice = "#{@link.title} added to the link box"
 		redirect_to links_path
