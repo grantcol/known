@@ -8,7 +8,7 @@
 </head>
 	<body>
 	  	<div class="feed_container" style="background-color: #ecf0f1;">
-	  		<table id="layout_table">
+	  		<table>
 	  			<tbody>
 	  			<tr>
 	  				<table bgcolor="#3498db" style="width: 100%;">
@@ -47,7 +47,7 @@
 						</tbody>
 					</table>
 	  			</tr>
-	  			<tr>
+	  			<!--<tr>
 	  				<td>
 	  					<div align="center">
 	  						<a href=<%= static_pages_about_path %> class="visited">About</a>
@@ -59,7 +59,24 @@
 	  						<a href=<%= static_pages_report_bug_path %> class="visited">Report Bug</a>
 	  					</div>
 	  				</td>
-	  			</tr>
+	  			</tr>-->
+	  			</tbody>
+	  		</table>
+	  		<table id="layout_footer">
+	  			<tbody>
+	  				<tr>
+		  				<td>
+		  					<div align="center">
+		  						<a href=<%= static_pages_about_path %> class="visited">About</a>
+		  						|
+		  						<a href=<%= static_pages_inquire_path %> class="visited">Inquire</a>
+		  						|
+		  						<a href=<%= static_pages_request_feature_path %> class="visited">Request Feature</a>
+		  						|
+		  						<a href=<%= static_pages_report_bug_path %> class="visited">Report Bug</a>
+		  					</div>
+		  				</td>
+	  				</tr>
 	  			</tbody>
 	  		</table>
 	  	</div>

@@ -247,6 +247,7 @@ textarea{
 }
 
 .feed_container {
+	position: relative;
 	width: 1000px;
 	height: 100%;
 	margin: 0 auto 0 auto;	
@@ -322,10 +323,13 @@ textarea{
 	color: #ffffff;
 	text-decoration: none;
 }
+
 .tag_link {
 	color: #7f8c8d;
 	text-decoration: none;
 }
-#layout_table {
 
+#layout_footer {
+	position: absolute;
+	bottom: 0;
 }
