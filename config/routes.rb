@@ -20,5 +20,6 @@ Known::Application.routes.draw do
   resources :links
   resources :tags
   resources :groups
+  resources :relationships
   #resources :messages
 end
