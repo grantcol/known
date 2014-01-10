@@ -16,7 +16,12 @@ class LinksController < ApplicationController
 	end
 	
 	def index
-		@link = Link.all
+		#@link = Link.all
+	    #if signed_in?
+	      @link  = current_user.links.build
+	      @feed_items = current_user.feed
+	    #end
+ 	end
 	end
 
 	def recieve
