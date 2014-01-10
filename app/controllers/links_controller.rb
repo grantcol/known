@@ -21,7 +21,6 @@ class LinksController < ApplicationController
 	      @link  = current_user.links.build
 	      @feed_items = current_user.feed
 	    #end
- 	end
 	end
 
 	def recieve
