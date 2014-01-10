@@ -5,6 +5,11 @@ Known::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
+  get "static_pages/about"
+  get "static_pages/inquire"
+  get "static_pages/request"
+  get "static_pages/report"
+  get "static_pages/blog"
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'

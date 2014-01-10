@@ -5,6 +5,7 @@ class Link < ActiveRecord::Base
 	has_many :tags, through: :taggings
 	attr_accessible :tag_list, :url, :title, :user_id
 	validates :user_id, presence: true
+	
 	def tag_list
 	  self.tags.collect do |tag|
 	    tag.name
