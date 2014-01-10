@@ -3,6 +3,7 @@ class Link < ActiveRecord::Base
 	default_scope -> { order('created_at DESC') }
 	has_many :taggings
 	has_many :tags, through: :taggings
+	has_many :votes
 	attr_accessible :tag_list, :url, :title, :user_id
 	validates :user_id, presence: true
 	
