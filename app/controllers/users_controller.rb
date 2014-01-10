@@ -8,15 +8,29 @@ class UsersController < ApplicationController
 	end
 
 	def new
-	  @user = User.new
+	  	@user = User.new
 	end
 
 	def create
-	  @user = User.new(params[:user])
-	  if @user.save
-	    redirect_to root_url, :notice => "Signed up!"
-	  else
-	    render "new"
+	  	@user = User.new(params[:user])
+	  	if @user.save
+	   		redirect_to root_url, :notice => "Signed up!"
+	  	else
+	    	render "new"
 	  end
+	end
+
+	def following
+	    @title = "Following"
+	    @user = User.find(params[:id])
+	    @users = @user.followed_users.paginate(page: params[:page])
+	    render 'show_follow'
+	end
+
+	def followers
+	    @title = "Followers"
+	    @user = User.find(params[:id])
+	    @users = @user.followers.paginate(page: params[:page])
+	    render 'show_follow'
 	end
 end

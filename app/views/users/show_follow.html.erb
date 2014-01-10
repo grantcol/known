@@ -1,0 +1,11 @@
+<% provide(:title, @title) %>
+<h2><%= @user.name %></h2>
+<span><%= link_to "Back to profile", @user %></span>
+
+<h3><%= @title %></h3>
+<% if @users.any? %>
+  <ul>
+    <%= render @users %>
+  </ul>
+  <%= will_paginate %>
+<% end %>
