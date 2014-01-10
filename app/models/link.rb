@@ -1,8 +1,9 @@
 class Link < ActiveRecord::Base
 	belongs_to :user
+	default_scope -> { order('created_at DESC') }
 	has_many :taggings
 	has_many :tags, through: :taggings
-	attr_accessible :tag_list, :url, :title
+	attr_accessible :tag_list, :url, :title, :user_id
 	validates :user_id, presence: true
 	def tag_list
 	  self.tags.collect do |tag|
