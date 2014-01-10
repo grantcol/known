@@ -13,7 +13,4 @@ class StaticPagesController < ApplicationController
 
 	def report
 	end
-
-	def blog
-	end
 end
