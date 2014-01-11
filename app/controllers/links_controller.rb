@@ -53,4 +53,9 @@ class LinksController < ApplicationController
 		flash.notice = "#{@link.title} trashed"
 		redirect_to links_path
 	end
+
+	def vote(up_or_down, link_id)
+		@link = Link.find(link_id)
+		@link.votes.create!(user_id: current_user, yn: up_or_down)
+	end
 end

@@ -26,4 +26,12 @@ class Link < ActiveRecord::Base
 	    where("user_id IN (#{followed_user_ids}) OR user_id = :user_id",
 	          user_id: user.id)
   	end
+
+  	def upvote
+  		votes.create!(user_id: current_user.id, yn: 'y')
+  	end
+
+  	def downvote
+  		votes.create!(user_id: current_user.id, yn: 'n')
+  	end
 end

@@ -21,9 +21,14 @@ Known::Application.routes.draw do
   end
   resources :sessions
   resources :posts
-  resources :links
+  resources :links do
+    member do
+      POST :vote
+    end
+  end
   resources :tags
   resources :groups
   resources :relationships
+  #resources :votes
   #resources :messages
 end
