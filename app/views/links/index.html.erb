@@ -4,7 +4,7 @@ g
 	<td align="right">
 		<%= i + 1 %>. 
 		<%= link_to image_tag("greyarrow.jpeg", :alt => "arrow", :width => 10, :height => 10), 
-					link_vote_path('y', link.id) %>	 
+					links_vote_path(link, 'y') %>	 
 	</td>
 	<td>
 		<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>

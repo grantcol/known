@@ -12,7 +12,7 @@ Known::Application.routes.draw do
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'
-
+  match 'links/:id/vote' => 'links#vote' as: :links_vote
   #resources :users
   resources :users do
     member do
@@ -21,11 +21,7 @@ Known::Application.routes.draw do
   end
   resources :sessions
   resources :posts
-  resources :links do
-    member do
-      POST :vote
-    end
-  end
+  resources :links 
   resources :tags
   resources :groups
   resources :relationships
