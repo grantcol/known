@@ -9,10 +9,11 @@ Known::Application.routes.draw do
   get "static_pages/inquire"
   get "static_pages/request_feature"
   get "static_pages/report_bug"
+  get "images/grayarrow.jpeg"
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'
-  post 'links/:id/vote' => 'links#vote', :as => "links_vote"
+  get 'links/:id/vote' => 'links#vote', :as => "links_vote"
   #resources :users
   resources :users do
     member do
