@@ -9,6 +9,7 @@
 		</td>
 		<td>
 			<%= form_for(current_user.subscriptions.build(channel_id: channel.id)) do |f| %>
+				<div><%= f.hidden_field :channel_id %></div>
   				<%= f.submit "Subscribe", class: "visited" %>
 			<% end %>
 		</td>
