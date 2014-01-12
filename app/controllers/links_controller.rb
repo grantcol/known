@@ -55,9 +55,9 @@ class LinksController < ApplicationController
 	end
 
 	def vote
-		#@link = Link.find(link_id)
 		@link = Link.find(params[:id])
 		@link.votes.create!(user_id: current_user.id , yn: 'y')
+		@link.score = @link.votes.count
 		redirect_to :action => 'index'
 	end
 end
