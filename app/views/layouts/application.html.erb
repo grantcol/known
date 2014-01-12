@@ -39,9 +39,15 @@
 	  			</tr>
 	  			<tr style="height:10px"></tr>
 	  			<tr>
+	  				<% if request.original_url == 'http://mighty-anchorage-6957.herokuapp.com/links' %>
 	  				<table>
 	  					<tr><td><%= yield %></td></tr>
 	  				</table>
+	  				<% else %>
+	  				<table align="center">
+	  					<tr><td><%= yield %></td></tr>
+	  				</table>
+	  				<% end %>
 	  			</tr>
 	  			<tr style="height:20px;"></tr>
 	  			</tbody>
