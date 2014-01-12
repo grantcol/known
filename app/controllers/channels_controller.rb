@@ -9,8 +9,9 @@ class ChannelsController < ApplicationController
 	end
 
 	def create 
-		@channel = Channel.new(channels_params)
+		@channel = current_user.channels.build(channels_params)
 		@channel.save
+		redirect_to channel_path(@channel)
 	end
 
 	def show
