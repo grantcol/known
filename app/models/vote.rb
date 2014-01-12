@@ -5,10 +5,4 @@ class Vote < ActiveRecord::Base
 	validates :link_id, presence: true
 
 	attr_accessible :user_id, :yn
-
-	def upvote
-	end
-
-	def downvote
-	end
 end

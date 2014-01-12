@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 	has_many :members
 	has_many :groups, through: :members 
 	has_many :channels 
+	has_many :subscriptions
 	has_attached_file :image , #styles: { medium: "300x300>", thumb: "50x50>" },
 	                  :url  => "/assets/users/:id/:style/:basename.:extension",
                       :path => ":rails_root/public/assets/users/:id/:style/:basename.:extension"
@@ -53,5 +54,13 @@ class User < ActiveRecord::Base
 
   	def feed
   		Link.from_users_followed_by(self)
+  	end
+
+  	def subscribe(channel)
+  		subscriptions.create(channel.id)
+  	end
+
+  	def unsubscribe(channel)
+  		subscriptions.find_by(channel.id).destroy!
   	end
 end
