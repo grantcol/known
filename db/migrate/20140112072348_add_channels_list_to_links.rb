@@ -1,5 +1,5 @@
 class AddChannelsListToLinks < ActiveRecord::Migration
   def change
-  	add_column :links, :channel_ids, array: true, default: [], :integer
+  	add_column :links, :channel_ids, :string
   end
 end
