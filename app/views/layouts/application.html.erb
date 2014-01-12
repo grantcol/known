@@ -17,7 +17,8 @@
 			  				<span class="nav_links"><%= link_to "Home", links_path, class: 'nav_link' %> |</span> 
 			  				<span class="nav_links"><%= link_to "Submit", link_path("new"), class: 'nav_link' %> |</span> 
 			  				<span class="nav_links"><%= link_to "People", users_path, class: 'nav_link' %> |</span> 	
-							<span class="nav_links"><%= link_to "Discover", tags_path, class: 'nav_link' %></span> 
+							<span class="nav_links"><%= link_to "Discover", tags_path, class: 'nav_link' %></span> |
+							<span class="nav_links"><%= link_to "Channels", channel_path, class: 'nav_link' %></span> 
 			  				<% if current_user %>
 								<span class="nav_links" style="float: right;">
 									<%= current_user.handle %> | 
