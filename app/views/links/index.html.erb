@@ -1,10 +1,9 @@
-g
 <% @feed_items.each_with_index do |link, i| %>
 <tr>
 	<td align="right">
 		<%= i + 1 %>. 
 		<%= link_to image_tag("greyarrow.jpeg", :alt => "arrow", :width => 10, :height => 10), 
-					links_vote_path(link, 'y') %>	 
+					links_vote_path(link, :yn => 'y') %>	 
 	</td>
 	<td>
 		<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
