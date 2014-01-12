@@ -12,7 +12,7 @@ Known::Application.routes.draw do
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'
-  post 'links/:id/vote' => 'links#vote', as: :links_vote
+  post 'links/:id/vote' => 'links#vote', as: => 'links_vote'
   #resources :users
   resources :users do
     member do

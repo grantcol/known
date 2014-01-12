@@ -54,8 +54,9 @@ class LinksController < ApplicationController
 		redirect_to links_path
 	end
 
-	def vote(up_or_down, link_id)
+	def vote(link_id, up_or_down)
 		@link = Link.find(link_id)
 		@link.votes.create!(user_id: current_user, yn: up_or_down)
+		redirect_to link_path
 	end
 end
