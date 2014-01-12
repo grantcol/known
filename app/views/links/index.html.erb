@@ -29,6 +29,7 @@
 		  <% link.tags.each do |tag| %>
 		    <%= link_to tag.name, tag_path(tag), class: 'tag_link' %>
 		  <% end %>
+		  | <%= time_ago_in_words(link.created_at) %> ago.
 	</td>
 </tr>
 <% end %>
