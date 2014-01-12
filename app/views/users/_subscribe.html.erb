@@ -1,0 +1,17 @@
+<% @user.channels.each_with_index do |channel, i| %>
+<table>
+	<tr>
+		<td align="right">
+			<%= i + 1 %>. 
+		</td>
+		<td>
+			<a class="link_title_tag link_title"><%= channel.name %></a>
+		</td>
+		<td>
+			<%= form_for(current_user.subscriptions.build(channel_id: channel)) do |f| %>
+  				<%= f.submit "Subscribe", class: "visited" %>
+			<% end %>
+		</td>
+	</tr>
+</table>
+<% end %>
