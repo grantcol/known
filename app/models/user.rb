@@ -57,10 +57,10 @@ class User < ActiveRecord::Base
   	end
 
   	def subscribe(channel)
-  		subscriptions.create(channel.id)
+  		subscriptions.create(channel_id: channel.id)
   	end
 
   	def unsubscribe(channel)
-  		subscriptions.find(channel.id).destroy!
+  		subscriptions.find(channel_id: channel.id).destroy!
   	end
 end
