@@ -9,7 +9,7 @@ Known::Application.routes.draw do
   get "static_pages/inquire"
   get "static_pages/request_feature"
   get "static_pages/report_bug"
-  get "images/grayarrow.jpeg"
+  #get "images/grayarrow.jpeg"
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'
