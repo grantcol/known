@@ -1,5 +1,4 @@
 Known::Application.routes.draw do
-  #root to: 'links#index'
   root :to => "users#new"
   get "sessions/new"
   get "log_out" => "sessions#destroy", :as => "log_out"
@@ -26,6 +25,5 @@ Known::Application.routes.draw do
   resources :groups
   resources :relationships
   resources :channels
-  #resources :votes
   #resources :messages
 end
