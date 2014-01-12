@@ -9,12 +9,10 @@ Known::Application.routes.draw do
   get "static_pages/inquire"
   get "static_pages/request_feature"
   get "static_pages/report_bug"
-  #get "images/grayarrow.jpeg"
   post 'posts/recieve'
   post 'links/recieve'
   post 'links/updateExtension'
   get 'links/:id/vote' => 'links#vote', :as => "links_vote"
-  #resources :users
   resources :users do
     member do
       get :following, :followers
@@ -26,6 +24,7 @@ Known::Application.routes.draw do
   resources :tags
   resources :groups
   resources :relationships
+  resources :channels
   #resources :votes
   #resources :messages
 end

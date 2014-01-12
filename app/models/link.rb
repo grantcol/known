@@ -1,5 +1,6 @@
 class Link < ActiveRecord::Base
 	belongs_to :user
+	belongs_to :channel
 	default_scope -> { order('created_at DESC') }
 	has_many :taggings
 	has_many :tags, through: :taggings
