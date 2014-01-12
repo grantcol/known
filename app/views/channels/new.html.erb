@@ -1,0 +1,17 @@
+<%= form_for(@channel) do |f| %>
+
+	<% @channel.errors.full_messages.each do |error| %>
+
+		<%= error %>
+
+	<% end %>
+
+    <div>
+    	<%= f.text_field :name, placeholder: 'name' %>
+    </div>
+    <div>
+    	<%= f.text_field :topics, placeholder: 'topics of this channel' %>
+    </div>
+    <%= f.submit %>
+
+<% end %>

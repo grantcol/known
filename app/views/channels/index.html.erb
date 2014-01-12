@@ -1,0 +1,11 @@
+<% @channels.each_with_index do |channel, i| %>
+<tr>
+	<td>
+		<%= i + 1 %>. 
+	</td>
+	<td>
+		<%= link_to channel.name, channels_path(channel), class: 'link_title_tag link_title' %>
+		(<%= channel.user.handle %>)
+	</td>
+</tr>
+<% end %>

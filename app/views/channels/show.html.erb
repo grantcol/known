@@ -1,0 +1,39 @@
+<div style="text-align: center;">
+	<h2><%= @channel.name %></h2>
+	<h3><%= @channel.description %></h3>
+	<h3>By: <%= @channel.user.handle %></h3>
+	<hr>
+</div>
+
+<% @channel.links.each_with_index do |link, i| %>
+<tr>
+	<td align="right">
+		<%= i + 1 %>. 
+		<%= link_to image_tag("grayarrow.jpg", :alt => "arrow", :width => 10, :height => 10), 
+					links_vote_path(link, :yn => 'y') %>	 
+	</td>
+	<td>
+		<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+		<% 
+	     	url = link.url
+	        stripped = url.slice!("https://")
+	        if stripped != "https://"
+	           stripped = url.slice!("http://")
+	        end
+	        temp = url.split("/");
+	        stripped = temp[0];
+ 		%>
+ 	(<%= stripped %>)
+	</td>
+</tr>
+<tr>
+	<td></td>
+	<td class="link_subtitle_tag">
+		<%=link_to link.user.handle, user_path(link.user), class: 'visited' %> |
+		Tags:
+		  <% link.tags.each do |tag| %>
+		    <%= link_to tag.name, tag_path(tag), class: 'tag_link' %>
+		  <% end %>
+	</td>
+</tr>
+<% end %>
