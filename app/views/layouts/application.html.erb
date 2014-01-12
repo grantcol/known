@@ -18,9 +18,9 @@
 			  				<span class="nav_links"><%= link_to "Submit", link_path("new"), class: 'nav_link' %> |</span> 
 			  				<span class="nav_links"><%= link_to "People", users_path, class: 'nav_link' %> |</span> 	
 							<span class="nav_links"><%= link_to "Discover", tags_path, class: 'nav_link' %> |</span>
-							<span class="nav_links"><%= link_to "Channels", channels_path, class: 'nav_link' %> |</span> 
+							<span class="nav_links"><%= link_to "Channels", channels_path, class: 'nav_link' %></span> 
 							<% if request.original_url == 'http://mighty-anchorage-6957.herokuapp.com/channels' %>
-								<span class="nav_links"><%= link_to "new", channels_path, class: 'nav_link' %></span>
+								<span class="nav_links">| <%= link_to "New Channel", channel_path("new"), class: 'nav_link' %></span>
 							<% end %>
 			  				<% if current_user %>
 								<span class="nav_links" style="float: right;">
