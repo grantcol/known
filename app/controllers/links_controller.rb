@@ -54,10 +54,10 @@ class LinksController < ApplicationController
 		redirect_to links_path
 	end
 
-	def vote(up_or_down)
+	def vote
 		#@link = Link.find(link_id)
 		@link = Link.find(params[:id])
-		@link.votes.create!(user_id: current_user, yn: up_or_down)
+		@link.votes.create!(user_id: current_user, yn: params[:yn])
 		redirect_to :action => 'index'
 	end
 end
