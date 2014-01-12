@@ -58,9 +58,9 @@ class LinksController < ApplicationController
 		@link = Link.find(params[:id])
 		@yn = @link.votes.create!(user_id: current_user.id , yn: params[:yn])
 		if @yn == true
-			@link.score.increment
+			@link.increment(:score, by = 1)
 		else
-			@link.score.decrement
+			@link.decrement(:score, by = 1)
 		end
 		@link.save
 		redirect_to :action => 'index'
