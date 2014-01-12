@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
 	def create
-	    @channel = Channel.find(params[:channel_id])
+	    @channel = Channel.find(params[:subscription][:channel_id])
 	    current_user.subscribe(@channel)
 	    redirect_to @channel
   	end
