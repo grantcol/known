@@ -25,5 +25,6 @@ Known::Application.routes.draw do
   resources :groups
   resources :relationships
   resources :channels
+  resources :subscriptions
   #resources :messages
 end

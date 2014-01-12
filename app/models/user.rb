@@ -61,6 +61,6 @@ class User < ActiveRecord::Base
   	end
 
   	def unsubscribe(channel)
-  		subscriptions.find_by(channel.id).destroy!
+  		subscriptions.find(channel.id).destroy!
   	end
 end
