@@ -61,6 +61,7 @@ class LinksController < ApplicationController
 			@link.score.increment
 		else
 			@link.score.decrement
+		end
 		@link.save
 		redirect_to :action => 'index'
 	end
