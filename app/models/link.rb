@@ -5,7 +5,7 @@ class Link < ActiveRecord::Base
 	has_many :taggings
 	has_many :tags, through: :taggings
 	has_many :votes
-	attr_accessible :tag_list, :url, :title, :user_id
+	attr_accessible :tag_list, :url, :title, :user_id, :score
 	validates :user_id, presence: true
 	
 	def tag_list
