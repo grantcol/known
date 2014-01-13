@@ -1,0 +1,11 @@
+<% @messages.each_with_index do |message, i| %>
+	<tr>
+		<td>
+			<%= i + 1 %>. 
+		</td>
+		<td>
+			<%= link_to message.text, message_path(message), class: 'link_title_tag link_title' %>
+			(from <%= message.sender_id %>)
+		</td>
+	</tr>
+<% end %>

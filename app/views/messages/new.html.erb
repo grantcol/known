@@ -1,0 +1,20 @@
+<%= form_for(@message) do |f| %>
+
+	<% @message.errors.full_messages.each do |error| %>
+
+		<%= error %>
+
+	<% end %>
+
+    <div>
+    	<%= f.text_field :recipient, placeholder: 'To:' %>
+    </div>
+    <div>
+        <%= f.text_field :link, placeholder: 'Link' %>
+    </div>
+    <div>
+    	<%= f.text_area :text, placeholder: 'message text' %>
+    </div>   
+    <%= f.submit %>
+
+<% end %>
