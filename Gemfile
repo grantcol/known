@@ -35,6 +35,8 @@ gem 'paperclip', '~> 3.5.2'
 
 gem 'protected_attributes'
 
+gem 'metainspector' 
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

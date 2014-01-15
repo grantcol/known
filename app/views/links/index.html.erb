@@ -1,4 +1,5 @@
 <% @feed_items.each_with_index do |link, i| %>
+<% page = MetaInspector.new(link.url) %>
 <tr>
 	<td align="right">
 		<%= i + 1 %>. 
@@ -8,7 +9,7 @@
 					links_vote_path(link, :yn => false) %>	 
 	</td>
 	<td>
-		<a href=<%= link.url %> class="link_title_tag link_title"><%= link.title %></a>
+		<a href=<%= link.url %> class="link_title_tag link_title"><%= page.title #link.title %></a>
 		<% 
 	     	url = link.url
 	        stripped = url.slice!("https://")
@@ -17,8 +18,10 @@
 	        end
 	        temp = url.split("/");
 	        stripped = temp[0];
+
  		%>
- 	(<%= stripped %>)
+ 	(<%= #stripped 
+ 		page.host%>)
 	</td>
 </tr>
 <tr>
