@@ -12,10 +12,6 @@ class LinksController < ApplicationController
 		#@link = Link.new(link_params)
 		#@link.user_id = current_user
 		@link = current_user.links.build(link_params)
-		#page = ::MetaInspector.new(params[:url])
-		#@link = current_user.links.build(:title => page.title,
-										 #:url => params[:url],
-										 #:tag_list => params[:tag_list])
 		@link.save
 		flash.notice = "#{@link.title} added to the link box"
 		redirect_to links_path
