@@ -5,19 +5,9 @@
 		<%= error %>
 
 	<% end %>
-
     <div>
-    	<%= #f.text_field :title, placeholder: 'title' %>
-    </div>
-    <div>
-    	<%= f.text_field :url, placeholder: 'url', class: 'link-box'%>
-    </div>
-    <div>
-        <%= #f.text_field :tag_list, placeholder: 'tags' %>
-    </div>
-    <div>
-        <%= #f.text_field :channel_id, placeholder: 'to what channel?' %>
-    </div>   
+    	<%= f.text_field :url, placeholder: 'url', class: 'link-box' %>
+    </div> 
     <%= f.submit %>
 
 <% end %>
