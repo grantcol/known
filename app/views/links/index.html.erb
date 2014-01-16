@@ -28,6 +28,7 @@
 <tr>
 	<td></td>
 	<td class="link_subtitle_tag">
+		<%= link.score %> points 
 		<%=link_to link.user.handle, user_path(link.user), class: 'visited' %> |
 		Tags:
 		  <% link.tags.each do |tag| %>
