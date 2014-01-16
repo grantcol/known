@@ -57,7 +57,7 @@ class LinksController < ApplicationController
 	def vote
 		@link = Link.find(params[:id])
 		@yn = @link.votes.create!(user_id: current_user.id , yn: params[:yn])
-		if @yn == true
+		if @yn.yn == true
 			@link.increment(:score, by = 1)
 		else
 			@link.decrement(:score, by = 1)
