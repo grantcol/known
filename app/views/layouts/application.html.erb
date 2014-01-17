@@ -40,9 +40,9 @@
 	  			<tr style="height:10px"></tr>
 	  			<tr>
 	  				<% if request.original_url.include? 'http://mighty-anchorage-6957.herokuapp.com/links' || 
-	  					  request.original_url == 'http://mighty-anchorage-6957.herokuapp.com/tags' ||
-	  					  request.original_url == 'http://mighty-anchorage-6957.herokuapp.com/channels' ||
-	  					  request.original_url == 'http://mighty-anchorage-6957.herokuapp.com/users'%>
+	  					  request.original_url.include? 'http://mighty-anchorage-6957.herokuapp.com/tags' ||
+	  					  request.original_url.include? 'http://mighty-anchorage-6957.herokuapp.com/channels' ||
+	  					  request.original_url.include? 'http://mighty-anchorage-6957.herokuapp.com/users' %>
 	  				<table>
 	  					<tr><td><%= yield %></td></tr>
 	  				</table>
