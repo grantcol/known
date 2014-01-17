@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: known_db-dev
+  database: grant #known_db-dev
   pool: 5
   timeout: 5000
 
