@@ -21,7 +21,7 @@ class LinksController < ApplicationController
 		#@link = Link.all
 	    #if signed_in?
 	      @link  = current_user.links.build
-	      @feed_items = current_user.feed.paginate(:page => params[:page], :per_page => 1)
+	      @feed_items = current_user.feed.paginate(:page => params[:page], :per_page => 14)
 	    #end
 	end
 
